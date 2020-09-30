@@ -1,6 +1,6 @@
 # AEB-1011IF8A Desarrollo de Aplicaciones para Dispositivos Móviles
 
-<img title="Elliott Engelmann" src="https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjkwODQwfQ" alt="silhouette of mountain" data-align="center">
+<img title="Elliott Engelmann" src="https://images.unsplash.com/photo-1571203191207-c7dc52f66d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="silhouette of mountain" data-align="center">
 
 ### :alien: Cristian Ricardo Escobedo Ruiz
 ### Ingeniería informática
