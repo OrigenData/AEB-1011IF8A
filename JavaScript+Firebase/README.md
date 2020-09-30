@@ -1,4 +1,4 @@
-#  :shipit: JavaScript+Firebase
+#  :cyclone: JavaScript+Firebase
 
 Ejercicio en el cual se conecta una base de datos de Firebase a la aplicación web.
 
@@ -32,6 +32,8 @@ En Farbase se puede ver los datos guardados en la base de datos
 ![](../img/JavaScript+Firebase/Screenshot_2020-09-30%20db-2020-09%20–%20Consola%20de%20Firebase7.png)
 
 Al igual que las modificaciones y las bajas de alumnos tambien las reconoce y actualiza en la base de datos.
+
+##  :earth_americas: Enlaces
 
 :link: [Documento GitHub](https://github.com/OrigenData/AEB-1011IF8A/blob/master/JavaScript%2BFirebase/README.md)
 
