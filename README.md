@@ -4,7 +4,7 @@
 
 ### :alien: Cristian Ricardo Escobedo Ruiz
 ### Ingeniería informática
-### Docente: DANIELA ADRIANA SANCHEZ VIZCARRA
+### Docente: Daniela Adriana Sanchez Vizcarra
 
 
 Repositorio donde se almacenan los trabajos como evidencia relacionados con la materia.
