@@ -1,5 +1,12 @@
 var firebaseConfig = {
-
+    apiKey: "AIzaSyAteKWrGT60BWZae3kfIIrsUrjTqHFk_Gw",
+    authDomain: "db-2020-09.firebaseapp.com",
+    databaseURL: "https://db-2020-09.firebaseio.com",
+    projectId: "db-2020-09",
+    storageBucket: "db-2020-09.appspot.com",
+    messagingSenderId: "813112756530",
+    appId: "1:813112756530:web:b2686a77d77162479fef2b",
+    measurementId: "G-0884MCXB0B"
 
 };
 // Initialize Firebase
