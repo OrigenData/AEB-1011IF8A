@@ -8,43 +8,43 @@ function resetFields(){
 function createR() {
     
     //Guardo los datos capturados usando el id de cada control
-    var id = document.getElementById("Input1").value;
+    var nss = document.getElementById("Input1").value;
     var nombre = document.getElementById("Input2").value;
     var correo = document.getElementById("Input3").value;
-    var carrera = document.getElementById("Input4").value;
+    var ciudad = document.getElementById("Input4").value;
 
 
     //validaciones
-    if (id.length > 0) {
+    if (nss.length > 0) {
         //creo un objeto que guarda los datos
         var alumno = {
-            id, //matricula:id
+            nss, //matricula:id
             nombre,
             correo,
-            carrera,
+            ciudad,
         }
 
-        var lista_alumnos=JSON.parse(localStorage.getItem("Alumnos"));
+        var lista_alumnos=JSON.parse(localStorage.getItem("Pacientes"));
 
         if(lista_alumnos==null)
         { 
             var lista_alumnos = [];
         }
         
-        const existe = lista_alumnos.some(element=>element.id==id); 
+        const existe = lista_alumnos.some(element=>element.nss==nss); 
 
         if(!existe||document.getElementById("Input1").disabled==true)
         {
             
             if(document.getElementById("Input1").disabled==true)
             {
-                var lista_alumnos=lista_alumnos.filter(alumno=>alumno.id!=id);
+                var lista_alumnos=lista_alumnos.filter(alumno=>alumno.nss!=nss);
 
             }
                 
             lista_alumnos.push(alumno);
-            var temporal = lista_alumnos.sort((a,b) => a.id-b.id);
-            localStorage.setItem("Alumnos", JSON.stringify(temporal));
+            var temporal = lista_alumnos.sort((a,b) => a.nss-b.nss);
+            localStorage.setItem("Pacientes", JSON.stringify(temporal));
             
             read();
             resetFields();
@@ -70,7 +70,7 @@ function read(){
     document.getElementById("Table1").innerHTML='';
     
 
-    const lista_alumnos = JSON.parse(localStorage.getItem("Alumnos"));
+    const lista_alumnos = JSON.parse(localStorage.getItem("Pacientes"));
     
      
     if(lista_alumnos)
@@ -97,33 +97,33 @@ function printRow(alumno){
         var cell6 = row.insertCell(5);
         
         //Agregamos la informacion a cada una de las columnas del registro
-        cell1.innerHTML = alumno.id;
+        cell1.innerHTML = alumno.nss;
         cell2.innerHTML = alumno.nombre; 
         cell3.innerHTML = alumno.correo;
-        cell4.innerHTML = alumno.carrera; 
-        cell5.innerHTML = `<button type="button" class="btn btn-danger" onClick="deleteR(${alumno.id})">Eliminar</button>`;
-        cell6.innerHTML = '<button type="button" class="btn btn-success" onClick="seekR('+alumno.id+')">Modificar</button>';
+        cell4.innerHTML = alumno.ciudad; 
+        cell5.innerHTML = `<button type="button" class="btn btn-danger" onClick="deleteR(${alumno.nss})">Eliminar</button>`;
+        cell6.innerHTML = '<button type="button" class="btn btn-success" onClick="seekR('+alumno.nss+')">Modificar</button>';
     }
 }
 
-function deleteR(id){
-    const lista_alumnos = JSON.parse(localStorage.getItem("Alumnos"));
-    var temporal=lista_alumnos.filter(alumno=>alumno.id!=id);
+function deleteR(nss){
+    const lista_alumnos = JSON.parse(localStorage.getItem("Pacientes"));
+    var temporal=lista_alumnos.filter(alumno=>alumno.nss!=nss);
     localStorage.setItem("Alumnos", JSON.stringify(temporal));
 
     if(temporal.length==0)
     { 
-        localStorage.removeItem("Alumnos");
+        localStorage.removeItem("Pacientes");
     }
  
     read();
     
 }
 
-function seekR(id){
+function seekR(nss){
 
-    const lista_alumnos = JSON.parse(localStorage.getItem("Alumnos"));
-    var alumno=lista_alumnos.filter(alumno=>alumno.id==id);
+    const lista_alumnos = JSON.parse(localStorage.getItem("Pacientes"));
+    var alumno=lista_alumnos.filter(alumno=>alumno.nss==nss);
     //console.log(alumno[0]);
     updateR(alumno[0]);
 }
@@ -131,22 +131,22 @@ function seekR(id){
 function updateR(alumno){
     if(alumno!=null)
     {
-        document.getElementById("Input1").value=alumno.id;
+        document.getElementById("Input1").value=alumno.nss;
         document.getElementById("Input1").disabled = true;
         document.getElementById("Input2").value=alumno.nombre;
         document.getElementById("Input3").value=alumno.correo;
-        document.getElementById("Input4").value=alumno.carrera;
+        document.getElementById("Input4").value=alumno.ciudad;
     }
 }
 
 
-//Para consulta de carrera
+//Para consulta de ciudad
 function readQ(){
     document.getElementById("Table2").innerHTML='';
     var c = document.getElementById("Input5").value;
   
-    const lista_alumnos = JSON.parse(localStorage.getItem("Alumnos"));
-    var alumnosC=lista_alumnos.filter(alumno=>alumno.carrera==c);
+    const lista_alumnos = JSON.parse(localStorage.getItem("Pacientes"));
+    var alumnosC=lista_alumnos.filter(alumno=>alumno.ciudad==c);
     if(alumnosC)
     {
         alumnosC.forEach((alumno)=>printRowQ(alumno));
@@ -170,9 +170,9 @@ function printRowQ(alumno){
     var cell4 = row.insertCell(3);
     
     //Agregamos la informacion a cada una de las columnas del registro
-    cell1.innerHTML = alumno.id;
+    cell1.innerHTML = alumno.nss;
     cell2.innerHTML = alumno.nombre; 
     cell3.innerHTML = alumno.correo;
-    cell4.innerHTML = alumno.carrera; 
+    cell4.innerHTML = alumno.ciudad; 
    
 }
