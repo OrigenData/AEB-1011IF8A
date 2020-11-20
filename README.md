@@ -1,3 +1,11 @@
+![](img/Screenshot_2020-11-20%20React%20App.png)
+
+# [GitHub Page](https://origendata.github.io/exmn-react/)
+
+# [Rama principal](https://github.com/OrigenData/AEB-1011IF8A/tree/master)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
