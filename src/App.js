@@ -52,7 +52,7 @@ class App extends Component {
     Swal.fire({
       position: 'center',
       icon: 'success',
-      title: 'Alumno agregado',
+      title: 'Producto agregado',
       showConfirmButton: false,
       timer: 4500
     })
